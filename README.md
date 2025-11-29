@@ -1,64 +1,126 @@
 🍷 Wine Quality Prediction Using KNN
-🚀 Overview
-This project leverages the K-Nearest Neighbors (KNN) algorithm to predict the quality of red wine based on various physicochemical features. It aims to provide a simple, interactive web application for users to assess wine quality using Streamlit.
 
+This project uses the K-Nearest Neighbors (KNN) algorithm to predict the quality of red wine based on various physicochemical attributes. It includes an interactive Streamlit web application where users can enter wine characteristics and instantly get a quality prediction.
+
+📸 Application Preview
+<p align="center"> <img src="https://github.com/user-attachments/assets/455b4694-4ebc-4959-be99-cd94eef27770" alt="Wine Quality Prediction App" width="800"> </p>
 🧪 Dataset
-The dataset used is the Red Wine Quality Dataset from the UCI Machine Learning Repository, consisting of 1,599 samples with features such as acidity, sugar content, pH, alcohol, and more.
+
+This project uses the Red Wine Quality Dataset from the UCI Machine Learning Repository, containing 1,599 samples with features like:
+
+Fixed acidity
+
+Volatile acidity
+
+Citric acid
+
+Residual sugar
+
+Chlorides
+
+Free sulfur dioxide
+
+Total sulfur dioxide
+
+Density
+
+pH
+
+Sulphates
+
+Alcohol
+
+Quality (target)
 
 ✨ Features
-✅ Upload Wine Characteristics – Input physicochemical properties for prediction
-✅ KNN Classification – Uses a trained KNN model with n_neighbors=3
-✅ Scaler Integration – Data is preprocessed using StandardScaler for consistency
-✅ Streamlit Web App – Fast, clean, and user-friendly interface
-✅ Real-Time Prediction – Instant results with predicted wine quality
+
+✅ Upload or input wine characteristics
+✅ KNN Classifier with n_neighbors=3
+✅ StandardScaler used during preprocessing
+✅ Built with Streamlit for fast UI
+✅ Real-time wine quality prediction
+✅ Clean and responsive interface
+
 🌐 Live Demo
-Check out the deployed app here:
+
+Explore the deployed web app here:
 👉 https://wine-qul-app.streamlit.app/
+
 📊 Methodology
-Data Preprocessing
+1. Data Preprocessing
 
-No missing values found
+No missing values detected
 
-Standardized using StandardScaler
+Features standardized using StandardScaler
 
-Exploratory Data Analysis (EDA)
+2. Exploratory Data Analysis (EDA)
 
 Count plots for class distribution
 
-Correlation heatmaps between features
+Correlation heatmap between features
 
-Model Training
+3. Model Training
 
-Data split into 80% training and 20% testing
+Train-test split: 80% training | 20% testing
 
 Trained using KNN (n_neighbors=3)
 
-Evaluation
+4. Evaluation
 
 Accuracy and classification report
 
-Handles class imbalance moderately (most wines are rated 5 or 6)
+Moderate handling of class imbalance
 
-Model Saving
+5. Model Saving
 
-Pickled both the KNN model and scaler for deployment
+Exported using pickle
+
+model.pkl
+
+scaler.pkl
+
 🔍 Results
-Test Accuracy: ~60% (can be improved with more complex models or sampling techniques)
 
-Limitations:
+📌 Test Accuracy: ~60%
+✔ Could be improved using:
 
-Class imbalance: classes 3, 4, 7, 8 are underrepresented
+Hyperparameter tuning
 
-Basic model, could be enhanced with hyperparameter tuning or ensembles
+Sampling techniques
 
-🧠 Challenges
-Imbalanced dataset
+Ensemble learning
 
-Feature scaling critical for KNN performance
+📉 Limitations:
 
-Choosing optimal k value
+Dataset is imbalanced (ratings 3, 4, 7, 8 are rare)
+
+KNN is sensitive to scaling and feature distribution
+
+🧠 Challenges Faced
+
+Class imbalance
+
+Selecting the best value of k
+
+Ensuring proper feature scaling (critical for KNN)
+
+📁 Project Structure
+📂 Wine-Quality-KNN
+│── data/
+│   └── winequality-red.csv
+│── model/
+│   ├── model.pkl
+│   └── scaler.pkl
+│── app.py
+│── knn_train.ipynb
+│── requirements.txt
+│── README.md
+
 📩 Contact
-📧 Md Hasnain Raza – mdhasnainraza463@gmail.com
-🔗 GitHub – @mdhasnainrazaa
 
-⭐ If you found this project useful, consider giving it a star on GitHub! ⭐
+👤 Md Hasnain Raza
+📧 mdhasnainraza463@gmail.com
+
+🔗 GitHub: @mdhasnainrazaa
+
+⭐ If you found this project useful, please consider giving it a star! ⭐
